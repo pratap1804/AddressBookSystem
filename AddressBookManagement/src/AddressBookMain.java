@@ -10,7 +10,7 @@ public class AddressBookMain {
 		public static void main(String[] args) {
 			System.out.println("Welcome to address book program!");
 			
-	//Created an object, asking user to call methods.
+	//Created an object, asking user and accordingly calling methods.
 			
 			AddressBook addressbook = new AddressBook();
 		    	System.out.println("Select any option to perform Operation of Person \n" 
