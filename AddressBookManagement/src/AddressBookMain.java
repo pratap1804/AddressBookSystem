@@ -16,7 +16,8 @@ public class AddressBookMain {
 		    	System.out.println("Select any option to perform Operation of Person \n" 
 		    							+" 1. To add a person: \n" + 
 		    								" 2. To edit Person's details: \n"
-		    										+ "3. To display person's information");
+		    										+ "3. To display person's information \n"+
+		    												"4. To delete a contact ");
 		    
 						    int option = sc.nextInt();
 						    switch (option) {
@@ -33,8 +34,12 @@ public class AddressBookMain {
 								addressbook.display();
 								break;
 								
+							case 4:
+								addressbook.deletePerson();
+								break;
+								
 							default :
-								System.out.println("Available choice is from 1 to 3!");
+								System.out.println("Available choice is from 1 to 4!");
 								
 						    }
 	    			}	

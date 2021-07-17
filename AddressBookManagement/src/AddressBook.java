@@ -161,5 +161,28 @@ public class AddressBook {
 				else 
 					System.out.println("Entered first name does not exist!");
 	        }			
-		}		
+		}
+		
+		//Method to delete a contact from the address book
+		
+		public void deletePerson() {
+			
+				System.out.println("Enter first name to delete its contact: ");
+				String firstName = sc.next();
+				
+				for (int i=0; i< personInfo.size(); i++) {
+					
+					Person person = (Person)personInfo.get(i);
+					if(firstName.equals(person.getLastName())) {
+						System.out.println(personInfo.get(i));
+						personInfo.remove(i);
+						System.out.println("Record Deleted");
+				}
+			}
+		}
+		
+			@Override  
+			protected void finalize() {   
+				sc.close(); 
+	    } 
 }
