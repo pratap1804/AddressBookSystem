@@ -20,7 +20,8 @@ public class AddressBookMain {
 		    											" 4. To edit Person's details: \n"+ 
 		    												"5. To display person's information \n"+
 		    													"6. To delete a contact \n"+
-		    														"7. To make a search with first name: ");	
+		    														"7. To make a search with first name: \n"+
+		    															" 8. To make a search in a city or state");	
 		    
 						    int option = sc.nextInt();
 						    switch (option) {
@@ -53,6 +54,8 @@ public class AddressBookMain {
 								addressBook.searchPerson();
 								break;
 								
+							case 8:
+								addressBook.searchByCityOrState();
 							default :
 								System.out.println("Available choice is from 1 to 4!");
 								

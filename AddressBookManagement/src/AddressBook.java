@@ -240,6 +240,23 @@ public class AddressBook {
 		        
 		    }
 		 }
+		 
+		 // Created method to search a person by city or state 
+		 
+		 public void searchByCityOrState() {
+			 
+		 
+		        System.out.println("Enter city to search a person");
+		        String city = sc.next();
+		        System.out.println("Enter state to search a person");
+		        String state = sc.next();
+		        for (Person person : personInfo) {
+		            if (city.equals(person.getCity()) || state.equals(person.getState())) {
+		                 System.out.println(city);
+		                 System.out.println(state);
+		            }
+		        }
+		 }
 		
 			@Override  
 			protected void finalize() {   
