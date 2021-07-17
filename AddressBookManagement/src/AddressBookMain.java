@@ -12,30 +12,40 @@ public class AddressBookMain {
 			
 	//Created an object, asking user and accordingly calling methods.
 			
-			AddressBook addressbook = new AddressBook();
+			AddressBook addressBook = new AddressBook();
 		    	System.out.println("Select any option to perform Operation of Person \n" 
 		    							+" 1. To add a person: \n" + 
-		    								" 2. To edit Person's details: \n"
-		    										+ "3. To display person's information \n"+
-		    												"4. To delete a contact ");
+		    			                      	"2. To view already existed address book "+
+		    			                      		"3. To add a new address book "+
+		    											" 4. To edit Person's details: \n"+ 
+		    												"5. To display person's information \n"+
+		    													"6. To delete a contact ");
 		    
 						    int option = sc.nextInt();
 						    switch (option) {
 						    
-							case 1 :
-								addressbook.addPerson();
+							case 1:
+								addressBook.addPerson();
 								break;
 								
-							case 2 :
-								addressbook.editPerson();
+							case 2:
+								addressBook.displayAddressBook();
 								break;
 								
-							case 3 :
-								addressbook.display();
+							case 3:
+								addressBook.newAddressBook();
 								break;
 								
 							case 4:
-								addressbook.deletePerson();
+								addressBook.editPerson();
+								break;
+								
+							case 5 :
+								addressBook.display();
+								break;
+								
+							case 6:
+								addressBook.deletePerson();
 								break;
 								
 							default :

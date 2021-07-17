@@ -8,7 +8,43 @@ public class AddressBook {
 
 		Scanner sc = new Scanner(System.in);
 		List<Person> personInfo = new ArrayList<>();
+		ArrayList<AddressBookName> addressbooklist = new ArrayList<AddressBookName>();
 	
+		// Created method to make new address book with different names.
+		
+		public void newAddressBook() {
+			
+			System.out.println("Enter AddressBook Name");
+		    String addressBookName = sc.next();
+		    
+		    AddressBookName address = new AddressBookName(addressBookName);
+		    
+		    addressbooklist.add(address);
+		    System.out.println(addressbooklist.toString());
+		}
+		
+		// Created method to display all the address books
+		
+		public void openAddressBook() {  
+			
+			displayAddressBook();
+	        System.out.println("Enter name to Open  AddressBook");
+	        String addressBookName = sc.next();
+	        
+	        for (AddressBookName addressBook : addressbooklist) {
+	            if (addressBookName.equals(addressBook.getAddressBookName())) {
+	                System.out.println("Address Book " + addressBook.getAddressBookName() + " is opened: ");
+	            }
+	        }
+	    }
+		
+		 public void displayAddressBook() {
+		        System.out.println("Display List of all AddressBook");
+		        for (int index = 0; index < addressbooklist.size(); index++) {
+		            System.out.println(addressbooklist.get(index));
+		        }
+		    }
+		
 	//Created method to add a contact 
 		
 		public void addPerson() {
