@@ -19,7 +19,8 @@ public class AddressBookMain {
 		    			                      		"3. To add a new address book "+
 		    											" 4. To edit Person's details: \n"+ 
 		    												"5. To display person's information \n"+
-		    													"6. To delete a contact ");
+		    													"6. To delete a contact \n"+
+		    														"7. To make a search with first name: ");	
 		    
 						    int option = sc.nextInt();
 						    switch (option) {
@@ -46,6 +47,10 @@ public class AddressBookMain {
 								
 							case 6:
 								addressBook.deletePerson();
+								break;
+								
+							case 7:
+								addressBook.searchPerson();
 								break;
 								
 							default :

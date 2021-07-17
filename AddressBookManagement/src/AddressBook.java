@@ -18,7 +18,6 @@ public class AddressBook {
 		    String addressBookName = sc.next();
 		    
 		    AddressBookName address = new AddressBookName(addressBookName);
-		    
 		    addressbooklist.add(address);
 		    System.out.println(addressbooklist.toString());
 		}
@@ -225,6 +224,22 @@ public class AddressBook {
 				}
 			}
 		}
+		
+		// Created search contact method to find if any contact with the same first name 
+		
+		 public void searchPerson() {
+		       
+		        System.out.println("Enter first name and last name seperately: ");
+		        String firstName = sc.next();
+		        
+		        for(Person person : personInfo) {
+		        if (firstName.equals(person.getFirstName())) {
+		            System.out.println("Person with same first name exists!");
+		        } else 
+		            System.out.println("Person with same first name does not exists!");
+		        
+		    }
+		 }
 		
 			@Override  
 			protected void finalize() {   
